@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:uploadvideo/core/widgets/auth/presentation/login.dart';
 void main(){
-  runApp(const UploadVideoApp());
+  runApp(const MyApp());
 }
-class UploadVideoApp extends StatelessWidget{
-  const UploadVideoApp({super.key});
+class MyApp extends StatelessWidget{
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context){
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      
+theme: ThemeData(
+  brightness: Brightness.dark,
+  scaffoldBackgroundColor: Color(0xFF0F1115),
+  primaryColor: Color(0xFFE53935),
+  fontFamily: 'Roboto'
+
+),
+home:LoginScreen(),
     );
   }
 }
