@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:uploadvideo/core/widgets/home/presentation/home.dart';
 
 class LoginScreen extends StatelessWidget{
   const LoginScreen({super.key});
@@ -36,7 +37,9 @@ class LoginScreen extends StatelessWidget{
                   backgroundColor: Color(0xFFE53935),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                   ),
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>HomeScreen()));
+                  },
                   child: Text("Continue"),
                 ),
               ),SizedBox(height: 30,) 
